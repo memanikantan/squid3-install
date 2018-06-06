@@ -14,7 +14,7 @@ htpasswd -c /etc/squid/passwd $usrn
 mv spi-ubuntu.conf /etc/squid/squid.conf
 
 # Creating empty blacklist.acl file for further blacklisting entries
-touch /etc/squid3/blacklist.acl	
+touch /etc/squid/blacklist.acl	
 
 
 # Opening default Squid port 3128 for clients to connect

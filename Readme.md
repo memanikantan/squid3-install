@@ -5,7 +5,7 @@
 
 - `git clone https://github.com/memanikantan/squid3-install.git`
 
-- `cd squid3-install && bash squid.sh`
+- `cd squid3-install && sudo bash squid.sh`
 
 
 

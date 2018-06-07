@@ -10,6 +10,9 @@ read -e -p "Your desired username: " usrn
 # Creating user with username from $usrn and asking user to set a password
 htpasswd -c /etc/squid/passwd $usrn
 
+# Back up config file
+cp /etc/squid/squid.conf /etc/squid/squid.conf.original
+
 # Update Squid configuration
 mv spi-ubuntu.conf /etc/squid/squid.conf
 
@@ -22,3 +25,6 @@ iptables -I INPUT -p tcp --dport 3128 -j ACCEPT
 
 # Saving firewall rules
 iptables-save
+
+# Restarting squid service
+sudo systemctl restart squid
